@@ -1,0 +1,47 @@
+{
+  "name": "screen-recorder-app",
+  "version": "1.0.0",
+  "description": "一个功能丰富的屏幕录制应用",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [
+    "electron",
+    "screen-recorder",
+    "vue",
+    "desktop-app"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^36.3.1",
+    "vue": "^3.5.14"
+  },
+  "devDependencies": {
+    "electron-builder": "^26.0.15",
+    "electron-builder-squirrel-windows": "^26.0.15"
+  },
+  "build": {
+    "appId": "com.screenrecorder.app",
+    "productName": "Screen Recorder",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
